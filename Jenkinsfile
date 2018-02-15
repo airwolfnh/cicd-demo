@@ -19,7 +19,7 @@ node("") {
 	        stage("Fetching Test Certs"){
 			}
 		stage("Build + Push Test Image"){
-			withCredentials([usernamePassword(credentialsId: 'damian', usernameVariable: 'USER', passwordVariable: 'PASSWORD')]) {
+			withCredentials([usernamePassword(credentialsId: 'angelo', usernameVariable: 'USER', passwordVariable: 'PASSWORD')]) {
                       		sh "echo  docker build --build-arg user=${USER} password=${PASSWORD}  github.com/creack/docker-firefox"
                		 }
        		 }
